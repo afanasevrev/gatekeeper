@@ -10,6 +10,7 @@ public class StartGateKeeper extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(StartGateKeeper.class.getResource("gatekeeper.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 450, 450);
+        scene.getStylesheets().add(getClass().getResource("css/logo.css").toExternalForm());
         stage.setTitle("Gatekeeper - guard of security");
         stage.setResizable(false);
         stage.setScene(scene);

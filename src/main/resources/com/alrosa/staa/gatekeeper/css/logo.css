@@ -1,0 +1,5 @@
+.custom-progress-bar {
+    -fx-accent: blue;
+    -fx-text-box-border: purple;
+    -fx-control-inner-background: purple;
+}

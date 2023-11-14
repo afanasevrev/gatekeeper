@@ -22,6 +22,7 @@ public class Controller implements Initializable {
     private ProgressBar progressBar = new ProgressBar();
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        progressBar.getStyleClass().add("custom-progress-bar");
         progressBar.setProgress(0.0);
         Timeline timeLine = new Timeline();
         KeyValue keyValue = new KeyValue(progressBar.progressProperty(), 1);

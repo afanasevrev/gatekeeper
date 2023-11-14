@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.ProgressBar?>
-<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
 
-<AnchorPane prefHeight="450.0" prefWidth="450.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.alrosa.staa.gatekeeper.Controller">
+<AnchorPane prefHeight="450.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alrosa.staa.gatekeeper.Controller">
    <children>
       <ImageView fx:id="logo" fitHeight="450.0" fitWidth="450.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@logo/logo.png" />
          </image>
       </ImageView>
-      <ProgressBar fx:id="progressBar" layoutX="25.0" layoutY="400.0" prefHeight="10.0" prefWidth="400.0" progress="0.0" />
+      <ProgressBar fx:id="progressBar" layoutX="25.0" layoutY="400.0" prefHeight="15.0" prefWidth="400.0" progress="0.0"></ProgressBar>
    </children>
 </AnchorPane>
