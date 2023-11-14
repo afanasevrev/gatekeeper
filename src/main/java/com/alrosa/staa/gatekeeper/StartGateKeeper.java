@@ -9,8 +9,9 @@ public class StartGateKeeper extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(StartGateKeeper.class.getResource("gatekeeper.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 300, 200);
-        stage.setTitle("Gate Keeper Secure Access");
+        Scene scene = new Scene(fxmlLoader.load(), 450, 450);
+        stage.setTitle("Gatekeeper - guard of security");
+        stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
     }
