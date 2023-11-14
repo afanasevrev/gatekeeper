@@ -3,6 +3,8 @@ package com.alrosa.staa.gatekeeper;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -26,8 +28,11 @@ public class Controller implements Initializable {
         progressBar.setProgress(0.0);
         Timeline timeLine = new Timeline();
         KeyValue keyValue = new KeyValue(progressBar.progressProperty(), 1);
-        KeyFrame keyFrame = new KeyFrame(Duration.seconds(7),keyValue);
+        KeyFrame keyFrame = new KeyFrame(Duration.seconds(7), onFinished, keyValue);
         timeLine.getKeyFrames().add(keyFrame);
         timeLine.play();
     }
+    EventHandler<ActionEvent> onFinished = e-> {
+        System.out.println("START WORK");
+    };
 }

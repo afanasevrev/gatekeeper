@@ -9,6 +9,6 @@ public abstract class Global {
     public abstract String getCompleteName();
     //Метод для возврата уникального унифицированного id, который хранится в базе данных проекта
     public abstract UUID getId();
-    //Метод для возврата enum-a
+    //Метод для возврата Enum-a
     public abstract Direction getDirection();
 }
