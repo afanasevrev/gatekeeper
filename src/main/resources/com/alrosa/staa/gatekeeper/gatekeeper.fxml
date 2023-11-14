@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.Color?>
 
-<AnchorPane prefHeight="450.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alrosa.staa.gatekeeper.Controller">
+<AnchorPane prefHeight="450.0" prefWidth="450.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.alrosa.staa.gatekeeper.Controller">
    <children>
-      <ImageView fx:id="logo" fitHeight="450.0" fitWidth="450.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="450.0" fitWidth="450.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@logo/logo.png" />
          </image>

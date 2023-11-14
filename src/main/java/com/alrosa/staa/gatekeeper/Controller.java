@@ -1,5 +1,6 @@
 package com.alrosa.staa.gatekeeper;
 
+import com.alrosa.staa.gatekeeper.admins_console.AdminsConsole;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
@@ -7,19 +8,15 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
-    @FXML
-    private ImageView logo = new ImageView();
     @FXML
     private ProgressBar progressBar = new ProgressBar();
     @Override
@@ -33,6 +30,13 @@ public class Controller implements Initializable {
         timeLine.play();
     }
     EventHandler<ActionEvent> onFinished = e-> {
-        System.out.println("START WORK");
+        Stage stage = (Stage) progressBar.getScene().getWindow();
+        stage.close();
+        AdminsConsole adminsConsole = new AdminsConsole();
+        try {
+            adminsConsole.start(new Stage());
+        } catch (Exception ex) {
+            throw new RuntimeException(ex);
+        }
     };
 }
