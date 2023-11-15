@@ -25,7 +25,7 @@ public class Controller implements Initializable {
         progressBar.setProgress(0.0);
         Timeline timeLine = new Timeline();
         KeyValue keyValue = new KeyValue(progressBar.progressProperty(), 1);
-        KeyFrame keyFrame = new KeyFrame(Duration.seconds(7), onFinished, keyValue);
+        KeyFrame keyFrame = new KeyFrame(Duration.seconds(5), onFinished, keyValue);
         timeLine.getKeyFrames().add(keyFrame);
         timeLine.play();
     }
