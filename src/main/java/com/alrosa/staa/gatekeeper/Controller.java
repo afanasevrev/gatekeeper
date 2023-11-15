@@ -1,6 +1,7 @@
 package com.alrosa.staa.gatekeeper;
 
 import com.alrosa.staa.gatekeeper.admins_console.AdminsConsole;
+import com.alrosa.staa.gatekeeper.admins_console.AdminsConsoleController;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
@@ -34,7 +35,7 @@ public class Controller implements Initializable {
         stage.close();
         AdminsConsole adminsConsole = new AdminsConsole();
         try {
-            adminsConsole.start(new Stage());
+           adminsConsole.start(new Stage());
         } catch (Exception ex) {
             throw new RuntimeException();
         }

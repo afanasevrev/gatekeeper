@@ -9,15 +9,14 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class AdminsConsoleController implements Initializable {
+
     //Горизонтальный сплиттер
     @FXML
-    private final SplitPane horizontal = new SplitPane();
-    //Вертикальный контроллер
+    private SplitPane horizontal = new SplitPane();
+    //Вертикальный сплиттер
     @FXML
-    private final SplitPane vertical = new SplitPane();
-    {
+    private SplitPane vertical = new SplitPane();
 
-    }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         AnchorPane.setLeftAnchor(horizontal, 0.0);

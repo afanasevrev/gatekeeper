@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane  prefHeight="400.0" prefWidth="600.0"  xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.alrosa.staa.gatekeeper.admins_console.AdminsConsoleController">
+<AnchorPane fx:controller="com.alrosa.staa.gatekeeper.admins_console.AdminsConsoleController" prefHeight="400.0" prefWidth="600.0"  xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" >
    <children>
       <SplitPane fx:id="vertical" dividerPositions="0.5" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0">
         <items>
