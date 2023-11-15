@@ -9,6 +9,7 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class AdminsConsole extends Application {
+    private Image image = new Image(StartGateKeeper.class.getResource("favicon/knight.png").toString());
     @Override
     public void start(Stage stage) throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(StartGateKeeper.class.getResource("admins_console/admins_console.fxml"));
@@ -17,7 +18,7 @@ public class AdminsConsole extends Application {
         //Scene scene = new Scene(root);
         stage.setMaximized(true);
         stage.setTitle("Gatekeeper - guard of security");
-        stage.getIcons().add(new Image("favicon/knight"));
+        stage.getIcons().add(image);
         stage.setScene(scene);
         stage.show();
     }
