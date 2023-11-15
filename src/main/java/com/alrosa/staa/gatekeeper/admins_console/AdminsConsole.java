@@ -13,7 +13,8 @@ public class AdminsConsole extends Application {
         //FXMLLoader fxmlLoader = new FXMLLoader(StartGateKeeper.class.getResource("admins_console/admins_console.fxml"));
         Parent root = FXMLLoader.load(StartGateKeeper.class.getResource("admins_console/admins_console.fxml"));
         //Scene scene = new Scene(fxmlLoader.load(),450, 450);
-        Scene scene = new Scene(root, 450, 450);
+        Scene scene = new Scene(root);
+        stage.setMaximized(true);
         stage.setTitle("Gatekeeper - guard of security");
         stage.setScene(scene);
         stage.show();
