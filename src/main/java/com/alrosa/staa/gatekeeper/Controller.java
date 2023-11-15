@@ -36,7 +36,7 @@ public class Controller implements Initializable {
         try {
             adminsConsole.start(new Stage());
         } catch (Exception ex) {
-            throw new RuntimeException(ex);
+            throw new RuntimeException();
         }
     };
 }
