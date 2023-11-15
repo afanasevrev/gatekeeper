@@ -15,7 +15,6 @@ public class StartGateKeeper extends Application {
         scene.getStylesheets().add(getClass().getResource("css/logo.css").toExternalForm());
         stage.initStyle(StageStyle.UNDECORATED);
         stage.setTitle("Gatekeeper - guard of security");
-        //stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
     }
