@@ -24,6 +24,7 @@ public class AdminsConsoleController implements Initializable {
     private TreeView treeView = new TreeView(mainSystem);
     //Указываем путь к рисунку main
     private Image mainImage = new Image("icons/main.png");
+    //Регистрируем рисунок в ImageView
     private ImageView mainView = new ImageView(mainImage);
     //Горизонтальный сплиттер
     @FXML
