@@ -12,7 +12,7 @@
                <children>
                   <SplitPane fx:id="horizontal" dividerPositions="0.5" prefHeight="200.0" prefWidth="600.0">
                     <items>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="300.0" />
+                      <AnchorPane fx:id="windowTree" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="300.0" />
                         <VBox prefHeight="200.0" prefWidth="300.0" />
                     </items>
                   </SplitPane>

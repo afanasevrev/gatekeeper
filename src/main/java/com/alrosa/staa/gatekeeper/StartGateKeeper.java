@@ -18,7 +18,5 @@ public class StartGateKeeper extends Application {
         stage.setScene(scene);
         stage.show();
     }
-    public static void main(String[] args) {
-        launch();
-    }
+    public static void main(String[] args) {launch();}
 }
