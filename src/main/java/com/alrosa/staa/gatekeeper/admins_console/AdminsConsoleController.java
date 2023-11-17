@@ -5,9 +5,7 @@ import com.alrosa.staa.gatekeeper.repozitory.Global;
 import com.alrosa.staa.gatekeeper.repozitory.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.SplitPane;
-import javafx.scene.control.TreeItem;
-import javafx.scene.control.TreeView;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -16,6 +14,17 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class AdminsConsoleController implements Initializable {
+    /*
+    Добавляем статический объект дерева - переменная, в которой будет размещаться
+    выбранный объект в дереве
+    */
+    private static TreeItem<Global> item;
+    //Добавим контекстное меню
+    private ContextMenu contextMenu = new ContextMenu();
+    //Создание кнопки "Добавить"
+    private MenuItem menuAdd = new MenuItem("Добавить");
+    //Создание кнопки "Удалить"
+    private MenuItem menuDelete = new MenuItem("Удалить");
     //Окно для отображения дерева
     @FXML
     private AnchorPane windowTree = new AnchorPane();
@@ -24,9 +33,11 @@ public class AdminsConsoleController implements Initializable {
     //Добавляем дерево
     private TreeView treeView = new TreeView(mainSystem);
     //Указываем путь к рисунку main
-    private Image mainImage = new Image(StartGateKeeper.class.getResource("icons/main.png").toString());
+    private final Image mainImage = new Image(StartGateKeeper.class.getResource("icons/main.png").toString());
     //Регистрируем рисунок в ImageView
-    private ImageView mainView = new ImageView(mainImage);
+    private final ImageView mainView = new ImageView(mainImage);
+    //Указываем путь к рисунку server
+    private final Image imageServer = new Image(StartGateKeeper.class.getResource("icons/server.png").toString());
     //Горизонтальный сплиттер
     @FXML
     private SplitPane horizontal = new SplitPane();
@@ -36,6 +47,11 @@ public class AdminsConsoleController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        //В контекстное меню добавляем кнопки
+        contextMenu.getItems().addAll(menuAdd, menuDelete);
+        //В наше дерево добавляем контекстное меню
+        treeView.setContextMenu(contextMenu);
+
         AnchorPane.setLeftAnchor(horizontal, 0.0);
         AnchorPane.setBottomAnchor(horizontal, 0.0);
         AnchorPane.setTopAnchor(horizontal, 0.0);
@@ -55,5 +71,14 @@ public class AdminsConsoleController implements Initializable {
         mainView.setFitWidth(25);
         mainView.setFitHeight(25);
         mainSystem.setGraphic(mainView);
+    }
+
+    //Метод для добавления объекта в дерево системы
+    private void addItem(TreeItem treeItem, Image image) {
+        ImageView imageView = new ImageView(image);
+        imageView.setFitHeight(25);
+        imageView.setFitWidth(25);
+        treeItem.setGraphic(imageView);
+        item.getChildren().add(treeItem);
     }
 }
