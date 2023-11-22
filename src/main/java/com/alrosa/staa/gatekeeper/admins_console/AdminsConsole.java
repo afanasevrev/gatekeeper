@@ -1,6 +1,7 @@
 package com.alrosa.staa.gatekeeper.admins_console;
 
 import com.alrosa.staa.gatekeeper.StartGateKeeper;
+import com.alrosa.staa.gatekeeper.Variables;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -9,7 +10,7 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class AdminsConsole extends Application {
-    private Image image = new Image(StartGateKeeper.class.getResource("favicon/shield.png").toString());
+
     @Override
     public void start(Stage stage) throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(StartGateKeeper.class.getResource("admins_console/admins_console.fxml"));
@@ -18,7 +19,7 @@ public class AdminsConsole extends Application {
         //Scene scene = new Scene(root);
         stage.setMaximized(true);
         stage.setTitle("Gatekeeper - Guard of Security");
-        stage.getIcons().add(image);
+        stage.getIcons().add(Variables.image);
         stage.setScene(scene);
         stage.show();
     }

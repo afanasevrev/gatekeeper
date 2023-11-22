@@ -1,6 +1,7 @@
 package com.alrosa.staa.gatekeeper.admins_console;
 
 import com.alrosa.staa.gatekeeper.StartGateKeeper;
+import com.alrosa.staa.gatekeeper.Variables;
 import com.alrosa.staa.gatekeeper.repozitory.Global;
 import com.alrosa.staa.gatekeeper.repozitory.Main;
 import javafx.fxml.FXML;
@@ -32,12 +33,8 @@ public class AdminsConsoleController implements Initializable {
     private TreeItem<Global> mainSystem = new TreeItem<>(new Main());
     //Добавляем дерево
     private TreeView treeView = new TreeView(mainSystem);
-    //Указываем путь к рисунку main
-    private final Image mainImage = new Image(StartGateKeeper.class.getResource("icons/main.png").toString());
     //Регистрируем рисунок в ImageView
-    private final ImageView mainView = new ImageView(mainImage);
-    //Указываем путь к рисунку server
-    private final Image imageServer = new Image(StartGateKeeper.class.getResource("icons/server.png").toString());
+    private final ImageView mainView = new ImageView(Variables.mainImage);
     //Горизонтальный сплиттер
     @FXML
     private SplitPane horizontal = new SplitPane();
