@@ -1,6 +1,5 @@
 package com.alrosa.staa.gatekeeper.admins_console;
 
-import com.alrosa.staa.gatekeeper.StartGateKeeper;
 import com.alrosa.staa.gatekeeper.Variables;
 import com.alrosa.staa.gatekeeper.repozitory.Global;
 import com.alrosa.staa.gatekeeper.repozitory.Main;
@@ -41,7 +40,6 @@ public class AdminsConsoleController implements Initializable {
     //Вертикальный сплиттер
     @FXML
     private SplitPane vertical = new SplitPane();
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         //В контекстное меню добавляем кнопки
