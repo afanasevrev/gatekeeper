@@ -1,8 +1,10 @@
 package com.alrosa.staa.gatekeeper;
 
 import com.alrosa.staa.gatekeeper.repozitory.Global;
+import com.alrosa.staa.gatekeeper.repozitory.Server;
 import javafx.scene.control.TreeItem;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 public class Variables {
     /*
@@ -18,8 +20,18 @@ public class Variables {
     public static final Image mainImage = new Image(StartGateKeeper.class.getResource("icons/main.png").toString());
     //Указываем путь к рисунку server
     public static final Image imageServer = new Image(StartGateKeeper.class.getResource("icons/server.png").toString());
+    //Регистрируем рисунок сервера в ImageView
+    public static final ImageView serverView = new ImageView(Variables.imageServer);
+    //Инициируем объект сервера
+    public static final TreeItem<Global> serverTreeItem = new TreeItem<>(new Server());
     //Указываем путь к рисунку computer
     public static final Image imageComputer = new Image(StartGateKeeper.class.getResource("icons/computer.png").toString());
     //Указываем путь к рисунку bureau
     public static final Image imageBureau = new Image(StartGateKeeper.class.getResource("icons/bureau.png").toString());
+
+    static {
+        serverView.setFitWidth(25);
+        serverView.setFitHeight(25);
+        serverTreeItem.setGraphic(Variables.serverView);
+    }
 }

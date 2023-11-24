@@ -22,10 +22,7 @@ public class ContainerConsole implements Initializable {
     private final ImageView globalView = new ImageView(Variables.mainImage);
     //Добавляем дерево
     private TreeView global = new TreeView(globalTreeItem);
-    //Регистрируем рисунок сервера в ImageView
-    private final ImageView serverView = new ImageView(Variables.imageServer);
-    //Инициируем объект сервера
-    private TreeItem<Global> serverTreeItem = new TreeItem<>(new Server());
+
     //Регистрируем рисунок компьютера в ImageView
     private final ImageView computerView = new ImageView(Variables.imageComputer);
     //Инициируем объект компьютера
@@ -51,10 +48,7 @@ public class ContainerConsole implements Initializable {
     //Метод для построения дерева объектов
     private void addItems(Direction direction) {
         switch (direction) {
-            case MAIN: globalTreeItem.getChildren().addAll(serverTreeItem, computerTreeItem, bureauTreeItem);
-                       serverView.setFitWidth(25);
-                       serverView.setFitHeight(25);
-                       serverTreeItem.setGraphic(serverView);
+            case MAIN: globalTreeItem.getChildren().addAll(Variables.serverTreeItem, computerTreeItem, bureauTreeItem);
                        computerView.setFitHeight(25);
                        computerView.setFitWidth(25);
                        computerTreeItem.setGraphic(computerView);
