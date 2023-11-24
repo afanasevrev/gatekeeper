@@ -14,11 +14,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class AdminsConsoleController implements Initializable {
-    /*
-    Добавляем статический объект дерева - переменная, в которой будет размещаться
-    выбранный объект в дереве
-    */
-    private static TreeItem<Global> item;
+
     //Добавим контекстное меню
     private ContextMenu contextMenu = new ContextMenu();
     //Создание кнопки "Добавить"
@@ -74,6 +70,6 @@ public class AdminsConsoleController implements Initializable {
         imageView.setFitHeight(25);
         imageView.setFitWidth(25);
         treeItem.setGraphic(imageView);
-        item.getChildren().add(treeItem);
+        Variables.item.getChildren().add(treeItem);
     }
 }
