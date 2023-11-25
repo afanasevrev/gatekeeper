@@ -34,17 +34,27 @@ public class ContainerConsole implements Initializable {
         globalView.setFitHeight(25);
         globalView.setFitWidth(25);
         globalTreeItem.setGraphic(globalView);
-        addItems(Variables.direction);
+        addItems(Direction.COMPUTER);
         globalTreeItem.setExpanded(true);
     }
     //Метод для построения дерева объектов
     private void addItems(Direction direction) {
         switch (direction) {
-            case MAIN: globalTreeItem.getChildren().addAll(Variables.serverTreeItem, Variables.computerTreeItem, Variables.bureauTreeItem);
+            case MAIN:
+                       globalTreeItem.getChildren().addAll(Variables.serverTreeItem, Variables.computerTreeItem, Variables.bureauTreeItem);
                        break;
             case SERVER:
+                       globalTreeItem.getChildren().addAll(Variables.percoTreeItem);
                        break;
-
+            case PERCO:
+                       globalTreeItem.getChildren().addAll(Variables.PERCoC01TreeItem);
+                       break;
+            case PERCOC01:
+                       globalTreeItem.getChildren().addAll(Variables.cardReaderTreeItem);
+                       break;
+            case COMPUTER:
+                       globalTreeItem.getChildren().addAll(Variables.consoleTreeItem);
+                       break;
             default:   System.out.println("Selected item: default");
                        break;
         }

@@ -1,9 +1,6 @@
 package com.alrosa.staa.gatekeeper;
 
-import com.alrosa.staa.gatekeeper.repozitory.Bureau;
-import com.alrosa.staa.gatekeeper.repozitory.Computer;
-import com.alrosa.staa.gatekeeper.repozitory.Global;
-import com.alrosa.staa.gatekeeper.repozitory.Server;
+import com.alrosa.staa.gatekeeper.repozitory.*;
 import javafx.scene.control.TreeItem;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -41,6 +38,34 @@ public class Variables {
     //Инициируем объект бюро
     public static final TreeItem<Global> bureauTreeItem = new TreeItem<>(new Bureau());
     //********************************************************************************************
+    //Указываем путь к рисунку perco
+    public static final Image imagePerco = new Image(StartGateKeeper.class.getResource("icons/perco.png").toString());
+    //Регистрируем рисунок perco в ImageView
+    public static final ImageView percoView = new ImageView(imagePerco);
+    //Инициируем объект perco
+    public static final TreeItem<Global> percoTreeItem = new TreeItem<>(new Perco());
+    //********************************************************************************************
+    //Указываем путь к рисунку PERCoC01
+    public static final Image imagePERCoC01 = new Image(StartGateKeeper.class.getResource("icons/PERCoC01.png").toString());
+    //Регистрируем рисунок PERCoC01 в ImageView
+    public static final ImageView PERCoC01View = new ImageView(imagePERCoC01);
+    //Инициируем объект PERCoC01
+    public static final TreeItem<Global> PERCoC01TreeItem = new TreeItem<>(new PERCoC01());
+    //********************************************************************************************
+    //Указываем путь к рисунку cardreader
+    public static final Image imageCardReader = new Image(StartGateKeeper.class.getResource("icons/cardreader.png").toString());
+    //Регистрируем рисунок cardreader в ImageView
+    public static final ImageView cardReaderView = new ImageView(imageCardReader);
+    //Инициируем объект cardReader
+    public static final TreeItem<Global> cardReaderTreeItem = new TreeItem<>(new CardReader());
+    //********************************************************************************************
+    //Указываем путь к рисунку console
+    public static final Image imageConsole = new Image(StartGateKeeper.class.getResource("icons/console.png").toString());
+    //Регистрируем рисунок console в ImageView
+    public static final ImageView consoleView = new ImageView(imageConsole);
+    //Инициируем объект console
+    public static final TreeItem<Global> consoleTreeItem = new TreeItem<>(new Console());
+    //********************************************************************************************
 
     static {
         serverView.setFitWidth(25);
@@ -54,5 +79,21 @@ public class Variables {
         bureauView.setFitWidth(25);
         bureauView.setFitHeight(25);
         bureauTreeItem.setGraphic(bureauView);
+
+        percoView.setFitHeight(25);
+        percoView.setFitWidth(25);
+        percoTreeItem.setGraphic(percoView);
+
+        PERCoC01View.setFitWidth(25);
+        PERCoC01View.setFitHeight(25);
+        PERCoC01TreeItem.setGraphic(PERCoC01View);
+
+        cardReaderView.setFitHeight(25);
+        cardReaderView.setFitWidth(25);
+        cardReaderTreeItem.setGraphic(cardReaderView);
+
+        consoleView.setFitWidth(25);
+        consoleView.setFitHeight(25);
+        consoleTreeItem.setGraphic(consoleView);
     }
 }
