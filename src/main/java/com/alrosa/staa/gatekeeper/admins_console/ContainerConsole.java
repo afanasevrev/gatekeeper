@@ -23,14 +23,6 @@ public class ContainerConsole implements Initializable {
     //Добавляем дерево
     private TreeView global = new TreeView(globalTreeItem);
 
-    //Регистрируем рисунок компьютера в ImageView
-    private final ImageView computerView = new ImageView(Variables.imageComputer);
-    //Инициируем объект компьютера
-    private TreeItem<Global> computerTreeItem = new TreeItem<>(new Computer());
-    //Регистрируем рисунок бюро в ImageView
-    private final ImageView bureauView = new ImageView(Variables.imageBureau);
-    //Инициируем объект бюро
-    private TreeItem<Global> bureauTreeItem = new TreeItem<>(new Bureau());
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -48,16 +40,11 @@ public class ContainerConsole implements Initializable {
     //Метод для построения дерева объектов
     private void addItems(Direction direction) {
         switch (direction) {
-            case MAIN: globalTreeItem.getChildren().addAll(Variables.serverTreeItem, computerTreeItem, bureauTreeItem);
-                       computerView.setFitHeight(25);
-                       computerView.setFitWidth(25);
-                       computerTreeItem.setGraphic(computerView);
-                       bureauView.setFitWidth(25);
-                       bureauView.setFitHeight(25);
-                       bureauTreeItem.setGraphic(bureauView);
+            case MAIN: globalTreeItem.getChildren().addAll(Variables.serverTreeItem, Variables.computerTreeItem, Variables.bureauTreeItem);
                        break;
             case SERVER:
                        break;
+
             default:   System.out.println("Selected item: default");
                        break;
         }
