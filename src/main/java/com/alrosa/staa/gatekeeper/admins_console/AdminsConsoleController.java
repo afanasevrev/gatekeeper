@@ -14,7 +14,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class AdminsConsoleController implements Initializable {
-
     //Добавим контекстное меню
     private ContextMenu contextMenu = new ContextMenu();
     //Создание кнопки "Добавить"
