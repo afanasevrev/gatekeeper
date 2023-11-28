@@ -13,6 +13,7 @@ public class Container extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(StartGateKeeper.class.getResource("admins_console/containers/container.fxml"));
         Scene scene = new Scene(fxmlLoader.load(),400, 400);
         stage.setTitle("Добавьте объект");
+        stage.setResizable(false);
         stage.getIcons().add(Variables.image);
         stage.setScene(scene);
         stage.show();
