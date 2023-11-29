@@ -66,6 +66,26 @@ public class Variables {
     //Инициируем объект console
     public static final TreeItem<Global> consoleTreeItem = new TreeItem<>(new Console());
     //********************************************************************************************
+    //Указываем путь к рисунку users
+    public static final Image imageUsers = new Image(StartGateKeeper.class.getResource("icons/users.png").toString());
+    //Регистрируем рисунок users в ImageView
+    public static final ImageView usersView = new ImageView(imageUsers);
+    //Инициируем объект users
+    public static final TreeItem<Global> usersTreeItem = new TreeItem<>(new Users());
+    //********************************************************************************************
+    //Указываем путь к рисунку admins
+    public static final Image imageAdmins = new Image(StartGateKeeper.class.getResource("icons/admins.png").toString());
+    //Регистрируем рисунок admins в ImageView
+    public static final ImageView adminsView = new ImageView(imageAdmins);
+    //Инициируем объект admins
+    public static final TreeItem<Global> adminsTreeItem = new TreeItem<>(new Admins());
+    //********************************************************************************************
+    //Уазываем путь к рисунку operators
+    public static final Image imageOperators = new Image(StartGateKeeper.class.getResource("icons/operators.png").toString());
+    //Регисртриуем рисунок в ImageView
+    public static final ImageView operatorsView = new ImageView(imageOperators);
+    //Инициируем объект operators
+    public static final TreeItem<Global> operatorsTreeItem = new TreeItem<>(new Operators());
 
     static {
         serverView.setFitWidth(25);
@@ -95,5 +115,17 @@ public class Variables {
         consoleView.setFitWidth(25);
         consoleView.setFitHeight(25);
         consoleTreeItem.setGraphic(consoleView);
+
+        usersView.setFitWidth(25);
+        usersView.setFitHeight(25);
+        usersTreeItem.setGraphic(usersView);
+
+        adminsView.setFitHeight(25);
+        adminsView.setFitWidth(25);
+        adminsTreeItem.setGraphic(adminsView);
+
+        operatorsView.setFitWidth(25);
+        operatorsView.setFitHeight(25);
+        operatorsTreeItem.setGraphic(operatorsView);
     }
 }

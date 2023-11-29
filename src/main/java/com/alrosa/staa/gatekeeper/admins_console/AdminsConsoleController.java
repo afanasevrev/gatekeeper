@@ -62,7 +62,6 @@ public class AdminsConsoleController implements Initializable {
         mainView.setFitHeight(25);
         mainSystem.setGraphic(mainView);
     }
-
     //Метод для добавления объекта в дерево системы
     private void addItem(TreeItem treeItem, Image image) {
         ImageView imageView = new ImageView(image);

@@ -23,7 +23,6 @@ public class ContainerConsole implements Initializable {
     //Добавляем дерево
     private TreeView global = new TreeView(globalTreeItem);
 
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         AnchorPane.setRightAnchor(global, 0.0);
@@ -34,14 +33,19 @@ public class ContainerConsole implements Initializable {
         globalView.setFitHeight(25);
         globalView.setFitWidth(25);
         globalTreeItem.setGraphic(globalView);
-        addItems(Direction.COMPUTER);
+        addItems(Direction.BUREAU);
         globalTreeItem.setExpanded(true);
     }
     //Метод для построения дерева объектов
     private void addItems(Direction direction) {
         switch (direction) {
             case MAIN:
-                       globalTreeItem.getChildren().addAll(Variables.serverTreeItem, Variables.computerTreeItem, Variables.bureauTreeItem);
+                       globalTreeItem.getChildren().addAll
+                               (
+                               Variables.serverTreeItem,
+                               Variables.computerTreeItem,
+                               Variables.bureauTreeItem
+                               );
                        break;
             case SERVER:
                        globalTreeItem.getChildren().addAll(Variables.percoTreeItem);
@@ -54,6 +58,14 @@ public class ContainerConsole implements Initializable {
                        break;
             case COMPUTER:
                        globalTreeItem.getChildren().addAll(Variables.consoleTreeItem);
+                       break;
+            case BUREAU:
+                       globalTreeItem.getChildren().addAll
+                               (
+                               Variables.usersTreeItem,
+                               Variables.adminsTreeItem,
+                               Variables.operatorsTreeItem
+                               );
                        break;
             default:   System.out.println("Selected item: default");
                        break;

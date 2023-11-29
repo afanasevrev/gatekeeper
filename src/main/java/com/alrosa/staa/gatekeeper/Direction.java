@@ -17,22 +17,16 @@ public enum Direction {
     CONSOLE,
     //Объекты USERS, ADMINS, OPERATORS
     MAN, WOMAN,
-
     //Объекты GLOBAL_ACCESS_LEVELS
     GLOBAL_ACCESS_LEVEL,
-
     //Объекты CARDS
     CARD,
-
     //Объекты CARD_LAYOUTS
     CARD_LAYOUT,
-
     //Объекты POSITIONS
     POSITION,
-
     //Объекты ORGANIZATIONS
     ORGANIZATION,
-
     //Объекты ORGANIZATION
     OFFICE;
 }
