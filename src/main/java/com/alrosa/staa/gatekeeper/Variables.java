@@ -93,6 +93,14 @@ public class Variables {
     public static final ImageView globalAccessLevelsView = new ImageView(imageGlobalAccessLevels);
     //Инициируем объект global_access_levels
     public static final TreeItem<Global> globalAccessLevelsItem = new TreeItem<>(new GlobalAccessLevels());
+    //********************************************************************************************
+    //Указываем путь к рисунку cards
+    public static final Image imageCards = new Image(StartGateKeeper.class.getResource("icons/cards.png").toString());
+    //Регистрируем рисунок в ImageView
+    public static final ImageView cardsView = new ImageView(imageCards);
+    //Инициируем объект cards
+    public static final TreeItem<Global> cardsTreeItem = new TreeItem<>(new Cards());
+    //********************************************************************************************
 
     static {
         serverView.setFitWidth(25);
@@ -138,5 +146,9 @@ public class Variables {
         globalAccessLevelsView.setFitHeight(25);
         globalAccessLevelsView.setFitWidth(25);
         globalAccessLevelsItem.setGraphic(globalAccessLevelsView);
+
+        cardsView.setFitHeight(25);
+        cardsView.setFitWidth(25);
+        cardsTreeItem.setGraphic(cardsView);
     }
 }
