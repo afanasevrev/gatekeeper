@@ -82,10 +82,17 @@ public class Variables {
     //********************************************************************************************
     //Уазываем путь к рисунку operators
     public static final Image imageOperators = new Image(StartGateKeeper.class.getResource("icons/operators.png").toString());
-    //Регисртриуем рисунок в ImageView
+    //Регистриуем рисунок в ImageView
     public static final ImageView operatorsView = new ImageView(imageOperators);
     //Инициируем объект operators
     public static final TreeItem<Global> operatorsTreeItem = new TreeItem<>(new Operators());
+    //********************************************************************************************
+    //Указываем путь к рисунку global_access_levels
+    public static final Image imageGlobalAccessLevels = new Image(StartGateKeeper.class.getResource("icons/global_access_levels.png").toString());
+    //Регистрируем рисунок в ImageView
+    public static final ImageView globalAccessLevelsView = new ImageView(imageGlobalAccessLevels);
+    //Инициируем объект global_access_levels
+    public static final TreeItem<Global> globalAccessLevelsItem = new TreeItem<>(new GlobalAccessLevels());
 
     static {
         serverView.setFitWidth(25);
@@ -127,5 +134,9 @@ public class Variables {
         operatorsView.setFitWidth(25);
         operatorsView.setFitHeight(25);
         operatorsTreeItem.setGraphic(operatorsView);
+
+        globalAccessLevelsView.setFitHeight(25);
+        globalAccessLevelsView.setFitWidth(25);
+        globalAccessLevelsItem.setGraphic(globalAccessLevelsView);
     }
 }
