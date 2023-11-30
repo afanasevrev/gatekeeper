@@ -127,6 +127,19 @@ public class Variables {
     public static final ImageView manView = new ImageView(imageMan);
     //Инициируем объект man
     public static final TreeItem<Global> manTreeItem = new TreeItem<>(new Man());
+    //********************************************************************************************
+    //Указываем путь к рисунку woman
+    public static final Image imageWoman = new Image(StartGateKeeper.class.getResource("icons/woman.png").toString());
+    //Регистрируем рисунок в ImageView
+    public static final ImageView womanView = new ImageView(imageWoman);
+    //Инициируем объект woman
+    public static final TreeItem<Global> womanTreeItem = new TreeItem<>(new Woman());
+    //Указываем путь к рисунку global_access_level
+    public static final Image imageGlobalAccessLevel = new Image(StartGateKeeper.class.getResource("icons/global_access_level.png").toString());
+    //Регистрируем рисунок в ImageView
+    public static final ImageView globalAccessLevelView = new ImageView(imageGlobalAccessLevel);
+    //Инициируем объект woman
+    public static final TreeItem<Global> globalAccessLevelTreeItem = new TreeItem<>(new GlobalAccessLevel());
 
     static {
         serverView.setFitWidth(25);
@@ -192,5 +205,13 @@ public class Variables {
         manView.setFitHeight(25);
         manView.setFitWidth(25);
         manTreeItem.setGraphic(manView);
+
+        womanView.setFitWidth(25);
+        womanView.setFitHeight(25);
+        womanTreeItem.setGraphic(womanView);
+
+        globalAccessLevelView.setFitWidth(25);
+        globalAccessLevelView.setFitHeight(25);
+        globalAccessLevelTreeItem.setGraphic(womanView);
     }
 }
