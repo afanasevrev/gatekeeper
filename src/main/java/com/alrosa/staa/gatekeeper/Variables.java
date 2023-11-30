@@ -22,7 +22,7 @@ public class Variables {
     /** Переменные объекты. Конец. **/
 
     /** Постоянные объекты **/
-    //Указываем путь к рисунку shield. Логотип.
+    //Указываем путь к рисунку shield. Значок.
     public static final Image image = new Image(StartGateKeeper.class.getResource("favicon/shield.png").toString());
     //Указываем путь к рисунку main
     public static final Image mainImage = new Image(StartGateKeeper.class.getResource("icons/main.png").toString());
