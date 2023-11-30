@@ -121,6 +121,12 @@ public class Variables {
     public static final ImageView organizationsView = new ImageView(imageOrganizations);
     //Инициируем объект organizations
     public static final TreeItem<Global> organizationsTreeItem = new TreeItem<>(new Organizations());
+    //********************************************************************************************
+    public static final Image imageMan = new Image(StartGateKeeper.class.getResource("icons/man.png").toString());
+    //Регистрируем рисунок в ImageView
+    public static final ImageView manView = new ImageView(imageMan);
+    //Инициируем объект man
+    public static final TreeItem<Global> manTreeItem = new TreeItem<>(new Man());
 
     static {
         serverView.setFitWidth(25);
@@ -182,5 +188,9 @@ public class Variables {
         organizationsView.setFitWidth(25);
         organizationsView.setFitHeight(25);
         organizationsTreeItem.setGraphic(organizationsView);
+
+        manView.setFitHeight(25);
+        manView.setFitWidth(25);
+        manTreeItem.setGraphic(manView);
     }
 }
