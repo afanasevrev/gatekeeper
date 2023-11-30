@@ -67,7 +67,9 @@ public class ContainerConsole implements Initializable {
                                Variables.operatorsTreeItem,
                                Variables.globalAccessLevelsTreeItem,
                                Variables.cardsTreeItem,
-                               Variables.cardLayoutsTreeItem
+                               Variables.cardLayoutsTreeItem,
+                               Variables.positionsTreeItem,
+                               Variables.organizationsTreeItem
                                );
                        break;
             default:   System.out.println("Selected item: default");

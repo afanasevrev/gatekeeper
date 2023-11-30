@@ -107,6 +107,20 @@ public class Variables {
     public static final ImageView cardLayoutsView = new ImageView(imageCardLayouts);
     //Инициируем объект cardLayouts
     public static final TreeItem<Global> cardLayoutsTreeItem = new TreeItem<>(new CardLayouts());
+    //********************************************************************************************
+    //Указываем путь к рисунку positions
+    public static final Image imagePositions = new Image(StartGateKeeper.class.getResource("icons/positions.png").toString());
+    //Регистрируем рисунок в ImageView
+    public static final ImageView positionsView = new ImageView(imagePositions);
+    //Инициируем объект positions
+    public static final TreeItem<Global> positionsTreeItem = new TreeItem<>(new Positions());
+    //********************************************************************************************
+    //Указываем путь к рисунку organizations
+    public static final Image imageOrganizations = new Image(StartGateKeeper.class.getResource("icons/organizations.png").toString());
+    //Регистрируем рисунок в ImageView
+    public static final ImageView organizationsView = new ImageView(imageOrganizations);
+    //Инициируем объект organizations
+    public static final TreeItem<Global> organizationsTreeItem = new TreeItem<>(new Organizations());
 
     static {
         serverView.setFitWidth(25);
@@ -160,5 +174,13 @@ public class Variables {
         cardLayoutsView.setFitWidth(25);
         cardLayoutsView.setFitHeight(25);
         cardLayoutsTreeItem.setGraphic(cardLayoutsView);
+
+        positionsView.setFitHeight(25);
+        positionsView.setFitWidth(25);
+        positionsTreeItem.setGraphic(positionsView);
+
+        organizationsView.setFitWidth(25);
+        organizationsView.setFitHeight(25);
+        organizationsTreeItem.setGraphic(organizationsView);
     }
 }
