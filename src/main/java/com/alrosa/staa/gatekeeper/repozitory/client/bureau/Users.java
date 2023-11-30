@@ -1,21 +1,22 @@
-package com.alrosa.staa.gatekeeper.repozitory;
+package com.alrosa.staa.gatekeeper.repozitory.client.bureau;
 
 import com.alrosa.staa.gatekeeper.Direction;
+import com.alrosa.staa.gatekeeper.repozitory.client.bureau.Bureau;
 
 import java.util.UUID;
 
-public class CardReader extends Global {
-    private String complete_name = "Считыватель";
-    private final Direction direction = Direction.CARDREADER;
+public class Users extends Bureau {
+    private String compete_name = "Пользователи";
+    private final Direction direction = Direction.USERS;
 
     @Override
     public String getCompleteName() {
-        return this.complete_name;
+        return this.compete_name;
     }
 
     @Override
     public void setCompleteName(String completeName) {
-        this.complete_name = completeName;
+        this.compete_name = completeName;
     }
 
     @Override

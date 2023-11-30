@@ -1,6 +1,10 @@
 package com.alrosa.staa.gatekeeper;
 
-import com.alrosa.staa.gatekeeper.repozitory.*;
+import com.alrosa.staa.gatekeeper.repozitory.client.*;
+import com.alrosa.staa.gatekeeper.repozitory.client.bureau.*;
+import com.alrosa.staa.gatekeeper.repozitory.client.computer.Computer;
+import com.alrosa.staa.gatekeeper.repozitory.client.computer.Console;
+import com.alrosa.staa.gatekeeper.repozitory.client.server.*;
 import javafx.scene.control.TreeItem;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -134,11 +138,12 @@ public class Variables {
     public static final ImageView womanView = new ImageView(imageWoman);
     //Инициируем объект woman
     public static final TreeItem<Global> womanTreeItem = new TreeItem<>(new Woman());
+    //********************************************************************************************
     //Указываем путь к рисунку global_access_level
     public static final Image imageGlobalAccessLevel = new Image(StartGateKeeper.class.getResource("icons/global_access_level.png").toString());
     //Регистрируем рисунок в ImageView
     public static final ImageView globalAccessLevelView = new ImageView(imageGlobalAccessLevel);
-    //Инициируем объект woman
+    //Инициируем объект globalAccessLevel
     public static final TreeItem<Global> globalAccessLevelTreeItem = new TreeItem<>(new GlobalAccessLevel());
 
     static {
@@ -212,6 +217,6 @@ public class Variables {
 
         globalAccessLevelView.setFitWidth(25);
         globalAccessLevelView.setFitHeight(25);
-        globalAccessLevelTreeItem.setGraphic(womanView);
+        globalAccessLevelTreeItem.setGraphic(globalAccessLevelView);
     }
 }

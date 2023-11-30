@@ -1,8 +1,8 @@
 package com.alrosa.staa.gatekeeper.admins_console;
 
 import com.alrosa.staa.gatekeeper.Variables;
-import com.alrosa.staa.gatekeeper.repozitory.Global;
-import com.alrosa.staa.gatekeeper.repozitory.Main;
+import com.alrosa.staa.gatekeeper.repozitory.client.Global;
+import com.alrosa.staa.gatekeeper.repozitory.client.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;

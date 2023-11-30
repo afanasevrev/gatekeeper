@@ -1,19 +1,19 @@
-package com.alrosa.staa.gatekeeper.repozitory;
+package com.alrosa.staa.gatekeeper.repozitory.client.bureau;
 
 import com.alrosa.staa.gatekeeper.Direction;
+import com.alrosa.staa.gatekeeper.repozitory.client.bureau.Bureau;
 
 import java.util.UUID;
 
-public class PERCoC01 extends Perco {
-
-    private String complete_name = "Контроллер PERCoC01";
-
-    private final Direction direction = Direction.PERCOC01;
+public class Admins extends Bureau {
+    private String complete_name = "Администраторы";
+    private final Direction direction = Direction.ADMINS;
 
     @Override
     public String getCompleteName() {
         return this.complete_name;
     }
+
     @Override
     public void setCompleteName(String completeName) {
         this.complete_name = completeName;

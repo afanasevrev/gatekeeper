@@ -1,13 +1,14 @@
-package com.alrosa.staa.gatekeeper.repozitory;
+package com.alrosa.staa.gatekeeper.repozitory.client.server;
 
 import com.alrosa.staa.gatekeeper.Direction;
+import com.alrosa.staa.gatekeeper.repozitory.client.server.Server;
 
 import java.util.UUID;
 
-public class GlobalAccessLevels extends Bureau {
-    private String complete_name = "Глобальные уровни доступа";
-    private final Direction direction = Direction.GLOBAL_ACCESS_LEVELS;
+public class Perco extends Server {
+    private String complete_name = "Контроллер Perco";
 
+    private final Direction direction = Direction.PERCO;
     @Override
     public String getCompleteName() {
         return this.complete_name;

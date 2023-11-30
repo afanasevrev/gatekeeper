@@ -1,4 +1,4 @@
-package com.alrosa.staa.gatekeeper.repozitory;
+package com.alrosa.staa.gatekeeper.repozitory.client;
 
 import com.alrosa.staa.gatekeeper.Direction;
 

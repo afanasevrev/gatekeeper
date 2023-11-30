@@ -1,25 +1,29 @@
-package com.alrosa.staa.gatekeeper.repozitory;
+package com.alrosa.staa.gatekeeper.repozitory.client.bureau;
 
 import com.alrosa.staa.gatekeeper.Direction;
+import com.alrosa.staa.gatekeeper.repozitory.client.bureau.Bureau;
 
 import java.util.UUID;
 
-public class Computer extends Global {
-    private String complete_name = "Компьютер";
+public class Operators extends Bureau {
+    private String complete_name = "Операторы";
+    private final Direction direction = Direction.OPERATORS;
 
-    private final Direction direction = Direction.COMPUTER;
     @Override
     public String getCompleteName() {
-        return complete_name;
+        return this.complete_name;
     }
+
     @Override
     public void setCompleteName(String completeName) {
         this.complete_name = completeName;
     }
+
     @Override
     public UUID getId() {
         return null;
     }
+
     @Override
     public Direction getDirection() {
         return this.direction;

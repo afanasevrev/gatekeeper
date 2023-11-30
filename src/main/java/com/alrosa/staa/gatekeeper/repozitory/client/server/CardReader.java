@@ -1,13 +1,13 @@
-package com.alrosa.staa.gatekeeper.repozitory;
+package com.alrosa.staa.gatekeeper.repozitory.client.server;
 
 import com.alrosa.staa.gatekeeper.Direction;
+import com.alrosa.staa.gatekeeper.repozitory.client.Global;
 
-import java.security.DigestException;
 import java.util.UUID;
 
-public class CardLayouts extends Bureau {
-    private String complete_name = "Макеты карт";
-    private final Direction direction = Direction.CARD_LAYOUTS;
+public class CardReader extends Global {
+    private String complete_name = "Считыватель";
+    private final Direction direction = Direction.CARDREADER;
 
     @Override
     public String getCompleteName() {

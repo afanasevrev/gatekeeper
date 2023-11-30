@@ -1,21 +1,23 @@
-package com.alrosa.staa.gatekeeper.repozitory;
+package com.alrosa.staa.gatekeeper.repozitory.client;
 
 import com.alrosa.staa.gatekeeper.Direction;
+import com.alrosa.staa.gatekeeper.repozitory.client.Global;
 
 import java.util.UUID;
 
-public class Positions extends Bureau {
-    private String complete_name = "Должности";
-    private Direction direction = Direction.POSITIONS;
+public class Main extends Global {
+    private String completeName = "Главный";
+
+    private final Direction direction = Direction.MAIN;
 
     @Override
     public String getCompleteName() {
-        return this.complete_name;
+        return completeName;
     }
 
     @Override
     public void setCompleteName(String completeName) {
-        this.complete_name = completeName;
+        this.completeName = completeName;
     }
 
     @Override

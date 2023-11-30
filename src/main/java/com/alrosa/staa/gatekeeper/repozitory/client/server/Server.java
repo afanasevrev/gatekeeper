@@ -1,16 +1,17 @@
-package com.alrosa.staa.gatekeeper.repozitory;
+package com.alrosa.staa.gatekeeper.repozitory.client.server;
 
 import com.alrosa.staa.gatekeeper.Direction;
+import com.alrosa.staa.gatekeeper.repozitory.client.Global;
 
 import java.util.UUID;
 
-public class Admins extends Bureau {
-    private String complete_name = "Администраторы";
-    private final Direction direction = Direction.ADMINS;
+public class Server extends Global {
+    private String complete_name = "Сервер";
+    private final Direction  direction = Direction.SERVER;
 
     @Override
     public String getCompleteName() {
-        return this.complete_name;
+        return complete_name;
     }
 
     @Override
@@ -25,7 +26,7 @@ public class Admins extends Bureau {
 
     @Override
     public Direction getDirection() {
-        return this.direction;
+        return direction;
     }
 
     @Override
