@@ -34,7 +34,7 @@ public class ContainerConsole implements Initializable {
         globalView.setFitHeight(25);
         globalView.setFitWidth(25);
         globalTreeItem.setGraphic(globalView);
-        addItems(Direction.POSITIONS);
+        addItems(Direction.ORGANIZATION);
         globalTreeItem.setExpanded(true);
     }
     //Метод для построения дерева объектов
@@ -103,6 +103,16 @@ public class ContainerConsole implements Initializable {
                        globalTreeItem.getChildren().addAll
                                (
                                Variables.positionTreeItem
+                               );
+            case ORGANIZATIONS:
+                       globalTreeItem.getChildren().addAll
+                               (
+                               Variables.organizationTreeItem
+                               );
+            case ORGANIZATION:
+                       globalTreeItem.getChildren().addAll
+                               (
+                               Variables.officeTreeItem
                                );
             default:   System.out.println("Selected item: default");
                        break;
