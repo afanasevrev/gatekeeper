@@ -34,7 +34,7 @@ public class ContainerConsole implements Initializable {
         globalView.setFitHeight(25);
         globalView.setFitWidth(25);
         globalTreeItem.setGraphic(globalView);
-        addItems(Direction.GLOBAL_ACCESS_LEVELS);
+        addItems(Direction.POSITIONS);
         globalTreeItem.setExpanded(true);
     }
     //Метод для построения дерева объектов
@@ -88,6 +88,22 @@ public class ContainerConsole implements Initializable {
                                Variables.globalAccessLevelTreeItem
                                );
                        break;
+            case CARDS:
+                       globalTreeItem.getChildren().addAll
+                               (
+                               Variables.cardTreeItem
+                               );
+                       break;
+            case CARD_LAYOUTS:
+                       globalTreeItem.getChildren().addAll
+                               (
+                               Variables.cardLayoutTreeItem
+                               );
+            case POSITIONS:
+                       globalTreeItem.getChildren().addAll
+                               (
+                               Variables.positionTreeItem
+                               );
             default:   System.out.println("Selected item: default");
                        break;
         }

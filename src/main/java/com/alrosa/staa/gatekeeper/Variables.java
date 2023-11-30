@@ -145,6 +145,27 @@ public class Variables {
     public static final ImageView globalAccessLevelView = new ImageView(imageGlobalAccessLevel);
     //Инициируем объект globalAccessLevel
     public static final TreeItem<Global> globalAccessLevelTreeItem = new TreeItem<>(new GlobalAccessLevel());
+    //********************************************************************************************
+    //Указываем путь к рисунку card
+    public static final Image imageCard = new Image(StartGateKeeper.class.getResource("icons/card.png").toString());
+    //Регистрируем рисунок в ImageView
+    public static final ImageView cardView = new ImageView(imageCard);
+    //Инициируем объект card
+    public static final TreeItem<Global> cardTreeItem = new TreeItem<>(new Card());
+    //********************************************************************************************
+    //Указываем путь к рисунку card_layout
+    public static final Image imageCardLayout = new Image(StartGateKeeper.class.getResource("icons/card_layout.png").toString());
+    //Регистрируем рисунок в ImageView
+    public static final ImageView cardLayoutView = new ImageView(imageCardLayout);
+    //Инициируем объект cardLayout
+    public static final TreeItem<Global> cardLayoutTreeItem = new TreeItem<>(new CardLayout());
+    //********************************************************************************************
+    //Указываем путь к рисунку position
+    public static final Image imagePosition = new Image(StartGateKeeper.class.getResource("icons/position.png").toString());
+    //Регистрируем рисунок в ImageView
+    public static final ImageView positionView = new ImageView(imagePosition);
+    //Инициируем объект position
+    public static final TreeItem<Global> positionTreeItem = new TreeItem<>(new Position());
 
     static {
         serverView.setFitWidth(25);
@@ -218,5 +239,17 @@ public class Variables {
         globalAccessLevelView.setFitWidth(25);
         globalAccessLevelView.setFitHeight(25);
         globalAccessLevelTreeItem.setGraphic(globalAccessLevelView);
+
+        cardView.setFitWidth(25);
+        cardView.setFitHeight(25);
+        cardTreeItem.setGraphic(cardView);
+
+        cardLayoutView.setFitHeight(25);
+        cardLayoutView.setFitWidth(25);
+        cardLayoutTreeItem.setGraphic(cardLayoutView);
+
+        positionView.setFitHeight(25);
+        positionView.setFitWidth(25);
+        positionTreeItem.setGraphic(positionView);
     }
 }
