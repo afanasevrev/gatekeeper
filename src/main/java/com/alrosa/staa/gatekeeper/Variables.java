@@ -92,7 +92,7 @@ public class Variables {
     //Регистрируем рисунок в ImageView
     public static final ImageView globalAccessLevelsView = new ImageView(imageGlobalAccessLevels);
     //Инициируем объект global_access_levels
-    public static final TreeItem<Global> globalAccessLevelsItem = new TreeItem<>(new GlobalAccessLevels());
+    public static final TreeItem<Global> globalAccessLevelsTreeItem = new TreeItem<>(new GlobalAccessLevels());
     //********************************************************************************************
     //Указываем путь к рисунку cards
     public static final Image imageCards = new Image(StartGateKeeper.class.getResource("icons/cards.png").toString());
@@ -101,6 +101,12 @@ public class Variables {
     //Инициируем объект cards
     public static final TreeItem<Global> cardsTreeItem = new TreeItem<>(new Cards());
     //********************************************************************************************
+    //Указываем путь к рисунку card_layouts
+    public static final Image imageCardLayouts = new Image(StartGateKeeper.class.getResource("icons/card_layouts.png").toString());
+    //Регистрируем рисунок в ImageView
+    public static final ImageView cardLayoutsView = new ImageView(imageCardLayouts);
+    //Инициируем объект cardLayouts
+    public static final TreeItem<Global> cardLayoutsTreeItem = new TreeItem<>(new CardLayouts());
 
     static {
         serverView.setFitWidth(25);
@@ -145,10 +151,14 @@ public class Variables {
 
         globalAccessLevelsView.setFitHeight(25);
         globalAccessLevelsView.setFitWidth(25);
-        globalAccessLevelsItem.setGraphic(globalAccessLevelsView);
+        globalAccessLevelsTreeItem.setGraphic(globalAccessLevelsView);
 
         cardsView.setFitHeight(25);
         cardsView.setFitWidth(25);
         cardsTreeItem.setGraphic(cardsView);
+
+        cardLayoutsView.setFitWidth(25);
+        cardLayoutsView.setFitHeight(25);
+        cardLayoutsTreeItem.setGraphic(cardLayoutsView);
     }
 }
