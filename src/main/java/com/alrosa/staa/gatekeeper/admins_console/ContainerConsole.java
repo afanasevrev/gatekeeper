@@ -4,6 +4,9 @@ import com.alrosa.staa.gatekeeper.Direction;
 import com.alrosa.staa.gatekeeper.Variables;
 import com.alrosa.staa.gatekeeper.repozitory.client.Global;
 import com.alrosa.staa.gatekeeper.repozitory.client.Main;
+import com.alrosa.staa.gatekeeper.repozitory.client.bureau.Bureau;
+import com.alrosa.staa.gatekeeper.repozitory.client.computer.Computer;
+import com.alrosa.staa.gatekeeper.repozitory.client.server.Server;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -40,8 +43,13 @@ public class ContainerConsole implements Initializable {
         globalView.setFitHeight(25);
         globalView.setFitWidth(25);
         globalTreeItem.setGraphic(globalView);
-        addItems(Variables.direction);
+        addItems(Variables.adminsConsoleDirection);
         globalTreeItem.setExpanded(true);
+
+        global.setOnMouseClicked(event -> {
+            Variables.containerConsoleItem = (TreeItem<Global>) global.getSelectionModel().getSelectedItem();
+            Variables.containerConsoleDirection = Variables.containerConsoleItem.getValue().getDirection();
+        });
     }
     //Метод для построения дерева объектов
     private void addItems(Direction direction) {
@@ -127,7 +135,34 @@ public class ContainerConsole implements Initializable {
     }
     @FXML
     private void isPressedButtonCreate() {
-
+        TreeItem<Global> item;
+        ImageView imageView;
+        switch (Variables.containerConsoleDirection) {
+            case MAIN:
+            case SERVER:   item = new TreeItem<>(new Server());
+                           imageView = new ImageView(Variables.imageServer);
+                           imageView.setFitHeight(25);
+                           imageView.setFitWidth(25);
+                           item.setGraphic(imageView);
+                           Variables.adminsConsoleItem.getChildren().add(item);
+                           break;
+            case COMPUTER: item = new TreeItem<>(new Computer());
+                           imageView = new ImageView(Variables.imageComputer);
+                           imageView.setFitHeight(25);
+                           imageView.setFitWidth(25);
+                           item.setGraphic(imageView);
+                           Variables.adminsConsoleItem.getChildren().add(item);
+                           break;
+            case BUREAU:   item = new TreeItem<>(new Bureau());
+                           imageView = new ImageView(Variables.imageBureau);
+                           imageView.setFitHeight(25);
+                           imageView.setFitWidth(25);
+                           item.setGraphic(imageView);
+                           Variables.adminsConsoleItem.getChildren().add(item);
+                           break;
+            default:       System.out.println(Variables.containerConsoleItem.getValue().getDirection());
+                           break;
+        }
     }
     @FXML
     private void isPressedButtonCancel() {

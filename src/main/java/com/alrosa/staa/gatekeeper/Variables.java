@@ -16,9 +16,11 @@ public class Variables {
     в которой будет размещаться
     выбранный объект в дереве
     */
-    public static TreeItem<Global> item;
+    public static TreeItem<Global> containerConsoleItem;
+    public static TreeItem<Global> adminsConsoleItem;
     //Объявляем статический enum
-    public static Direction direction = Direction.MAIN;
+    public static Direction containerConsoleDirection = Direction.MAIN;
+    public static Direction adminsConsoleDirection = Direction.MAIN;
     /** Переменные объекты. Конец. **/
 
     /** Постоянные объекты **/

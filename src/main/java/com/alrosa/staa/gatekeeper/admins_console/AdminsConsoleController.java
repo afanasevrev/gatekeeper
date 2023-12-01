@@ -28,9 +28,9 @@ public class AdminsConsoleController implements Initializable {
     @FXML
     private AnchorPane windowTree = new AnchorPane();
     //Добавляем основную ветку дерева
-    private TreeItem<Global> mainSystem = new TreeItem<>(new Main());
+    public static TreeItem<Global> mainSystem = new TreeItem<>(new Main());
     //Добавляем дерево
-    private TreeView treeView = new TreeView(mainSystem);
+    public static TreeView treeView = new TreeView(mainSystem);
     //Регистрируем рисунок в ImageView
     private final ImageView mainView = new ImageView(Variables.mainImage);
     //Горизонтальный сплиттер
@@ -67,10 +67,10 @@ public class AdminsConsoleController implements Initializable {
         mainSystem.setGraphic(mainView);
 
         treeView.setOnMouseClicked(event -> {
-            Variables.item = (TreeItem<Global>) treeView.getSelectionModel().getSelectedItem();
-            Variables.direction = Variables.item.getValue().getDirection();
+            Variables.adminsConsoleItem = (TreeItem<Global>) treeView.getSelectionModel().getSelectedItem();
+            Variables.adminsConsoleDirection = Variables.adminsConsoleItem.getValue().getDirection();
                     //Проверяем, что элемент не является пустым и что была нажата правая кнопка мыши
-                    if (Variables.item != null && event.getButton() == MouseButton.SECONDARY) {
+                    if (Variables.adminsConsoleItem != null && event.getButton() == MouseButton.SECONDARY) {
                         //Добавляем реакцию на нажатие кнопки "Добавить"
                         menuAdd.setOnAction(event1 -> {
                             try {
@@ -81,10 +81,10 @@ public class AdminsConsoleController implements Initializable {
                         });
                         //Добавляем реакцию на нажатие кнопки "Удалить"
                         menuDelete.setOnAction(event1 -> {
-                            System.out.println(Variables.direction);
+                            //System.out.println(Variables.direction);
                         });
                     }
-        }
+            }
         );
     }
     //Метод для добавления объекта в дерево системы
@@ -93,6 +93,6 @@ public class AdminsConsoleController implements Initializable {
         imageView.setFitHeight(25);
         imageView.setFitWidth(25);
         treeItem.setGraphic(imageView);
-        Variables.item.getChildren().add(treeItem);
+        Variables.adminsConsoleItem.getChildren().add(treeItem);
     }
 }
