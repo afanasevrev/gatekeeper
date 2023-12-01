@@ -8,12 +8,16 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseButton;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class AdminsConsoleController implements Initializable {
+    private Stage stage = new Stage();
+    private Container container = new Container();
     //Добавим контекстное меню
     private ContextMenu contextMenu = new ContextMenu();
     //Создание кнопки "Добавить"
@@ -61,6 +65,27 @@ public class AdminsConsoleController implements Initializable {
         mainView.setFitWidth(25);
         mainView.setFitHeight(25);
         mainSystem.setGraphic(mainView);
+
+        treeView.setOnMouseClicked(event -> {
+            Variables.item = (TreeItem<Global>) treeView.getSelectionModel().getSelectedItem();
+            Variables.direction = Variables.item.getValue().getDirection();
+                    //Проверяем, что элемент не является пустым и что была нажата правая кнопка мыши
+                    if (Variables.item != null && event.getButton() == MouseButton.SECONDARY) {
+                        //Добавляем реакцию на нажатие кнопки "Добавить"
+                        menuAdd.setOnAction(event1 -> {
+                            try {
+                                container.start(stage);
+                            } catch (Exception e) {
+                                throw new RuntimeException(e);
+                            }
+                        });
+                        //Добавляем реакцию на нажатие кнопки "Удалить"
+                        menuDelete.setOnAction(event1 -> {
+                            System.out.println(Variables.direction);
+                        });
+                    }
+        }
+        );
     }
     //Метод для добавления объекта в дерево системы
     private void addItem(TreeItem treeItem, Image image) {

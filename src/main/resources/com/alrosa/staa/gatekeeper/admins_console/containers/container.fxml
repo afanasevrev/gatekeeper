@@ -5,8 +5,8 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alrosa.staa.gatekeeper.admins_console.ContainerConsole">
    <children>
-      <Button layoutX="200.0" layoutY="350.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Добавить" />
-      <Button layoutX="300.0" layoutY="350.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Отмена" />
+      <Button fx:id="buttonCreate" onAction="#isPressedButtonCreate" layoutX="200.0" layoutY="350.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Добавить" />
+      <Button fx:id="buttonCancel" onAction="#isPressedButtonCancel" layoutX="300.0" layoutY="350.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" text="Отмена" />
       <AnchorPane fx:id="anchorPane" prefHeight="300.0" prefWidth="400.0" />
    </children>
 </AnchorPane>

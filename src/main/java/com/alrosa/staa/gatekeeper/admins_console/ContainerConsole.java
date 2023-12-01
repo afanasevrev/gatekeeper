@@ -6,17 +6,23 @@ import com.alrosa.staa.gatekeeper.repozitory.client.Global;
 import com.alrosa.staa.gatekeeper.repozitory.client.Main;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class ContainerConsole implements Initializable {
     @FXML
-    AnchorPane anchorPane = new AnchorPane();
+    private Button buttonCreate = new Button();
+    @FXML
+    private Button buttonCancel = new Button();
+    @FXML
+    private AnchorPane anchorPane = new AnchorPane();
     //Инициируем объект дерева
     private TreeItem<Global> globalTreeItem = new TreeItem<>(new Main());
     //Регистрируем рисунок главного объекта в ImageView
@@ -34,11 +40,12 @@ public class ContainerConsole implements Initializable {
         globalView.setFitHeight(25);
         globalView.setFitWidth(25);
         globalTreeItem.setGraphic(globalView);
-        addItems(Direction.ORGANIZATION);
+        addItems(Variables.direction);
         globalTreeItem.setExpanded(true);
     }
     //Метод для построения дерева объектов
     private void addItems(Direction direction) {
+        globalTreeItem.getChildren().clear();
         switch (direction) {
             case MAIN:
                        globalTreeItem.getChildren().addAll
@@ -117,5 +124,14 @@ public class ContainerConsole implements Initializable {
             default:   System.out.println("Selected item: default");
                        break;
         }
+    }
+    @FXML
+    private void isPressedButtonCreate() {
+
+    }
+    @FXML
+    private void isPressedButtonCancel() {
+        Stage stage = (Stage) buttonCancel.getScene().getWindow();
+        stage.close();
     }
 }
