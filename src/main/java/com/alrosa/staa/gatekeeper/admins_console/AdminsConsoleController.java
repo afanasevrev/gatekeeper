@@ -82,6 +82,12 @@ public class AdminsConsoleController implements Initializable {
                         //Добавляем реакцию на нажатие кнопки "Удалить"
                         menuDelete.setOnAction(event1 -> {
                             //System.out.println(Variables.direction);
+                            switch (Variables.adminsConsoleDirection) {
+                                case MAIN:
+                                          break;
+                                default:  Variables.adminsConsoleItem.getParent().getChildren().remove(Variables.adminsConsoleItem);
+                                          break;
+                            }
                         });
                     }
             }
