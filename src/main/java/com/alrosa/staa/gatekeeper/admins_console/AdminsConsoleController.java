@@ -1,5 +1,6 @@
 package com.alrosa.staa.gatekeeper.admins_console;
 
+import com.alrosa.staa.gatekeeper.Direction;
 import com.alrosa.staa.gatekeeper.Variables;
 import com.alrosa.staa.gatekeeper.repozitory.client.Global;
 import com.alrosa.staa.gatekeeper.repozitory.client.Main;
@@ -74,6 +75,7 @@ public class AdminsConsoleController implements Initializable {
                         //Добавляем реакцию на нажатие кнопки "Добавить"
                         menuAdd.setOnAction(event1 -> {
                             try {
+                                Variables.containerConsoleDirection = Direction.MAIN;
                                 container.start(stage);
                             } catch (Exception e) {
                                 throw new RuntimeException(e);
