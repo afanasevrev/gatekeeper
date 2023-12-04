@@ -18,6 +18,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.net.URL;
+import java.util.Comparator;
 import java.util.ResourceBundle;
 
 public class ContainerConsole implements Initializable {
@@ -317,6 +318,8 @@ public class ContainerConsole implements Initializable {
             default:       System.out.println(Variables.containerConsoleItem.getValue().getDirection());
                            break;
         }
+        //Сортируем элементы дерева после необходимых итераций
+        Variables.adminsConsoleItem.getChildren().sort(Comparator.comparing(t->t.getValue().toString()));
     }
     @FXML
     private void isPressedButtonCancel() {
