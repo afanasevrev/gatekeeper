@@ -11,6 +11,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.net.URL;
@@ -40,6 +41,8 @@ public class AdminsConsoleController implements Initializable {
     //Вертикальный сплиттер
     @FXML
     private SplitPane vertical = new SplitPane();
+    @FXML
+    private VBox vBox = new VBox();
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         //В контекстное меню добавляем кнопки
