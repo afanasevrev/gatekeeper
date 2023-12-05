@@ -8,23 +8,16 @@ import javafx.scene.Parent;
 import java.io.IOException;
 
 public class Boxes {
-    public Parent loader;
-    public void init(Direction direction) {
+    public static Parent loaderDefault;
+    public static Parent loaderMain;
+
+    static {
         try {
-            switch(direction) {
-                case MAIN:     loader = new FXMLLoader().load(StartGateKeeper.class.getResource("admins_console/boxes/main.fxml"));
-                               break;
-                case SERVER:
-                case COMPUTER:
-                case BUREAU:
-
-                default:       loader = new FXMLLoader().load(StartGateKeeper.class.getResource("admins_console/default.fxml"));
-                               break;
-
-            }
-        }
-        catch (IOException e) {
+            loaderMain = new FXMLLoader().load(StartGateKeeper.class.getResource("admins_console/boxes/main.fxml"));
+            loaderDefault = new FXMLLoader().load(StartGateKeeper.class.getResource("admins_console/default.fxml"));
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
+
 }

@@ -2,6 +2,7 @@ package com.alrosa.staa.gatekeeper.admins_console;
 
 import com.alrosa.staa.gatekeeper.Direction;
 import com.alrosa.staa.gatekeeper.Variables;
+import com.alrosa.staa.gatekeeper.admins_console.boxes.Boxes;
 import com.alrosa.staa.gatekeeper.repozitory.client.Global;
 import com.alrosa.staa.gatekeeper.repozitory.client.Main;
 import javafx.fxml.FXML;
@@ -94,6 +95,17 @@ public class AdminsConsoleController implements Initializable {
                                           break;
                             }
                         });
+                        //Проверяем, что элемент не является пустым и что была нажата левая кнопка мыши
+                    } else if(Variables.adminsConsoleItem != null && event.getButton() == MouseButton.PRIMARY) {
+                        switch(Variables.adminsConsoleDirection) {
+                            case MAIN:
+                                    vBox.getChildren().clear();
+                                    vBox.getChildren().add(Boxes.loaderMain);
+                                    break;
+                            default:
+                                    vBox.getChildren().clear();
+                                    break;
+                        }
                     }
             }
         );
