@@ -20,7 +20,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField layoutX="160.0" layoutY="50.0">
+      <TextField fx:id="textField" layoutX="160.0" layoutY="50.0">
          <font>
             <Font size="14.0" />
          </font>
