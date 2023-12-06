@@ -51,6 +51,11 @@ public class AdminsConsoleController implements Initializable {
         //В наше дерево добавляем контекстное меню
         treeView.setContextMenu(contextMenu);
 
+        AnchorPane.setLeftAnchor(vBox, 0.0);
+        AnchorPane.setBottomAnchor(vBox, 0.0);
+        AnchorPane.setTopAnchor(vBox, 0.0);
+        AnchorPane.setRightAnchor(vBox, 0.0);
+
         AnchorPane.setLeftAnchor(horizontal, 0.0);
         AnchorPane.setBottomAnchor(horizontal, 0.0);
         AnchorPane.setTopAnchor(horizontal, 0.0);

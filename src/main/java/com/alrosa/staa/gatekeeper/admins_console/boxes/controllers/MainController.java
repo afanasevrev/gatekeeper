@@ -4,6 +4,7 @@ import com.alrosa.staa.gatekeeper.Variables;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
@@ -11,7 +12,8 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class MainController implements Initializable {
-    private String text;
+    @FXML
+    private Label label = new Label();
     @FXML
     TextField textField = new TextField();
     @FXML
@@ -23,15 +25,28 @@ public class MainController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        text = Variables.adminsConsoleItem.getValue().getCompleteName();
-        textField.setText(text);
+        textField.setText(Variables.adminsConsoleItem.getValue().getCompleteName());
+        label.setText("1");
 
-        AnchorPane.setRightAnchor(mainPane, 0.0);
-        AnchorPane.setLeftAnchor(mainPane, 0.0);
         AnchorPane.setTopAnchor(mainPane, 0.0);
+        AnchorPane.setLeftAnchor(mainPane, 0.0);
         AnchorPane.setBottomAnchor(mainPane, 0.0);
+        AnchorPane.setRightAnchor(mainPane, 0.0);
 
         AnchorPane.setBottomAnchor(buttonCreate, 0.0);
         AnchorPane.setBottomAnchor(buttonCancel, 0.0);
+    }
+    @FXML
+    private void setButtonCreate() {
+        if (!Variables.adminsConsoleItem.getValue().getCompleteName().equals(textField.getText())) {
+            Variables.adminsConsoleItem.getValue().setCompleteName(textField.getText());
+            System.out.println("Is created");
+        } else {
+            System.out.println("Not create");
+        }
+    }
+    @FXML
+    private void setButtonCancel() {
+        System.out.println("Operation is canceled!");
     }
 }
