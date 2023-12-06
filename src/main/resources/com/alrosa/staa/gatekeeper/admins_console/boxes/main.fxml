@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+<AnchorPane fx:controller="com.alrosa.staa.gatekeeper.admins_console.boxes.controllers.MainController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
    <children>
       <Button layoutX="210.0" layoutY="250.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="75.0" text="Создать" />
       <Button layoutX="300.0" layoutY="250.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="75.0" text="Отмена" />
