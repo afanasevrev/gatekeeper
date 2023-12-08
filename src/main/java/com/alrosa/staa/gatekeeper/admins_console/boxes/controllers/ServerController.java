@@ -29,7 +29,7 @@ public class ServerController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        textFieldName.setText(Variables.adminsConsoleItem.getValue().getCompleteName());
+
         labelID.setText("2");
         textFieldIP.setText("0.0.0.0");
         textFieldPort.setText("8080");
@@ -41,5 +41,16 @@ public class ServerController implements Initializable {
 
         AnchorPane.setBottomAnchor(buttonSave, 0.0);
         AnchorPane.setBottomAnchor(buttonCancel, 0.0);
+        textFieldName.setText(Variables.adminsConsoleItem.getValue().getCompleteName());
+
+    }
+    @FXML
+    private void setButtonSave() {
+        textFieldName.setText(Variables.adminsConsoleItem.getValue().getCompleteName());
+    }
+
+    @FXML
+    private void setButtonCancel() {
+        System.out.println("Operation is canceled");
     }
 }

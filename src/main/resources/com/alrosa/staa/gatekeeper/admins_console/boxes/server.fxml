@@ -49,8 +49,8 @@
             <Font size="14.0" />
          </font>
       </TextField>
-      <Button fx:id="buttonCancel" layoutX="294.0" layoutY="228.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Отмена" />
-      <Button fx:id="buttonSave" layoutX="175.0" layoutY="228.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Сохранить">
+      <Button fx:id="buttonCancel" onAction="#setButtonCancel" layoutX="294.0" layoutY="228.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Отмена" />
+      <Button fx:id="buttonSave" onAction="#setButtonSave" layoutX="175.0" layoutY="228.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Сохранить">
          <font>
             <Font size="14.0" />
          </font>
