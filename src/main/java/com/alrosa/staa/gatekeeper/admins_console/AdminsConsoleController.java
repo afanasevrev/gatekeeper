@@ -107,6 +107,10 @@ public class AdminsConsoleController implements Initializable {
                                     vBox.getChildren().clear();
                                     vBox.getChildren().add(Boxes.loaderMain);
                                     break;
+                            case SERVER:
+                                    vBox.getChildren().clear();
+                                    vBox.getChildren().add(Boxes.loaderServer);
+                                    break;
                             default:
                                     vBox.getChildren().clear();
                                     break;

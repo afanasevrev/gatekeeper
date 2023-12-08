@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane fx:controller="com.alrosa.staa.gatekeeper.admins_console.boxes.controllers.ServerController" prefHeight="300.0" prefWidth="445.0" stylesheets="@../../css/styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="serverPane" fx:controller="com.alrosa.staa.gatekeeper.admins_console.boxes.controllers.ServerController" prefHeight="300.0" prefWidth="445.0" stylesheets="@../../css/styles.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="25.0" layoutY="40.0" prefHeight="17.0" prefWidth="114.0" text="Наименование">
          <font>
