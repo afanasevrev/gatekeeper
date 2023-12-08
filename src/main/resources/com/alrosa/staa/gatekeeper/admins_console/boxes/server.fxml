@@ -29,28 +29,28 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField layoutX="150.0" layoutY="40.0" prefHeight="25.0" prefWidth="240.0">
+      <TextField fx:id="textFieldName" layoutX="150.0" layoutY="40.0" prefHeight="25.0" prefWidth="240.0">
          <font>
             <Font size="14.0" />
          </font>
       </TextField>
-      <Label layoutX="150.0" layoutY="80.0" prefHeight="25.0" prefWidth="240.0" text="2">
+      <Label fx:id="labelID" layoutX="150.0" layoutY="80.0" prefHeight="25.0" prefWidth="240.0" text="2">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField layoutX="150.0" layoutY="120.0" prefHeight="25.0" prefWidth="240.0">
+      <TextField fx:id="textFieldIP" layoutX="150.0" layoutY="120.0" prefHeight="25.0" prefWidth="240.0">
          <font>
             <Font size="14.0" />
          </font>
       </TextField>
-      <TextField layoutX="150.0" layoutY="160.0" prefHeight="25.0" prefWidth="240.0">
+      <TextField fx:id="textFieldPort" layoutX="150.0" layoutY="160.0" prefHeight="25.0" prefWidth="240.0">
          <font>
             <Font size="14.0" />
          </font>
       </TextField>
-      <Button layoutX="294.0" layoutY="228.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Отмена" />
-      <Button layoutX="175.0" layoutY="228.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Сохранить">
+      <Button fx:id="buttonCancel" layoutX="294.0" layoutY="228.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Отмена" />
+      <Button fx:id="buttonSave" layoutX="175.0" layoutY="228.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Сохранить">
          <font>
             <Font size="14.0" />
          </font>

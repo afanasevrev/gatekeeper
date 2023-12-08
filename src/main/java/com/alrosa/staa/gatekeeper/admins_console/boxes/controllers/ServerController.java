@@ -11,7 +11,7 @@ import java.util.ResourceBundle;
 
 public class ServerController implements Initializable {
     @FXML
-    private Label label = new Label();
+    private Label labelID = new Label();
     @FXML
     private TextField textFieldName = new TextField();
     @FXML
