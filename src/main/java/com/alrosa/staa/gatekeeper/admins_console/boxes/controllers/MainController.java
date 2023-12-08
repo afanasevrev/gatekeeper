@@ -19,7 +19,7 @@ public class MainController implements Initializable {
     @FXML
     private AnchorPane mainPane = new AnchorPane();
     @FXML
-    private Button buttonCreate = new Button();
+    private Button buttonSave = new Button();
     @FXML
     private Button buttonCancel = new Button();
 
@@ -33,11 +33,11 @@ public class MainController implements Initializable {
         AnchorPane.setBottomAnchor(mainPane, 0.0);
         AnchorPane.setRightAnchor(mainPane, 0.0);
 
-        AnchorPane.setBottomAnchor(buttonCreate, 0.0);
+        AnchorPane.setBottomAnchor(buttonSave, 0.0);
         AnchorPane.setBottomAnchor(buttonCancel, 0.0);
     }
     @FXML
-    private void setButtonCreate() {
+    private void setButtonSave() {
         if (!Variables.adminsConsoleItem.getValue().getCompleteName().equals(textField.getText())) {
             Variables.adminsConsoleItem.getValue().setCompleteName(textField.getText());
             System.out.println("Is created");

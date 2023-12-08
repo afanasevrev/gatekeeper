@@ -14,7 +14,7 @@ public class Boxes {
 
     static {
         try {
-            loaderMain = new FXMLLoader().load(StartGateKeeper.class.getResource("admins_console/boxes/main.fxml"));
+            loaderMain = new FXMLLoader(). load(StartGateKeeper.class.getResource("admins_console/boxes/main.fxml"));
             loaderDefault = new FXMLLoader().load(StartGateKeeper.class.getResource("admins_console/default.fxml"));
             loaderServer = new FXMLLoader().load(StartGateKeeper.class.getResource("admins_console/boxes/server.fxml"));
         } catch (IOException e) {
