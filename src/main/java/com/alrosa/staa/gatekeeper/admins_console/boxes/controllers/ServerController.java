@@ -11,6 +11,9 @@ import javafx.scene.layout.AnchorPane;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * Контроллер для работы с формой сервера
+ */
 public class ServerController implements Initializable {
     @FXML
     private AnchorPane serverPane = new AnchorPane();
