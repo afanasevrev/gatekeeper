@@ -2,12 +2,12 @@ package com.alrosa.staa.gatekeeper.admins_console;
 
 import com.alrosa.staa.gatekeeper.Direction;
 import com.alrosa.staa.gatekeeper.Variables;
-import com.alrosa.staa.gatekeeper.repozitory.client.Global;
-import com.alrosa.staa.gatekeeper.repozitory.client.Main;
-import com.alrosa.staa.gatekeeper.repozitory.client.bureau.*;
-import com.alrosa.staa.gatekeeper.repozitory.client.computer.Computer;
-import com.alrosa.staa.gatekeeper.repozitory.client.computer.Console;
-import com.alrosa.staa.gatekeeper.repozitory.client.server.*;
+import com.alrosa.staa.gatekeeper.repository.client.Global;
+import com.alrosa.staa.gatekeeper.repository.client.Main;
+import com.alrosa.staa.gatekeeper.repository.client.bureau.*;
+import com.alrosa.staa.gatekeeper.repository.client.computer.Computer;
+import com.alrosa.staa.gatekeeper.repository.client.computer.Console;
+import com.alrosa.staa.gatekeeper.repository.client.server.*;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;

@@ -1,17 +1,17 @@
 package com.alrosa.staa.gatekeeper;
 
-import com.alrosa.staa.gatekeeper.repozitory.client.*;
-import com.alrosa.staa.gatekeeper.repozitory.client.bureau.*;
-import com.alrosa.staa.gatekeeper.repozitory.client.computer.Computer;
-import com.alrosa.staa.gatekeeper.repozitory.client.computer.Console;
-import com.alrosa.staa.gatekeeper.repozitory.client.server.*;
+import com.alrosa.staa.gatekeeper.repository.client.*;
+import com.alrosa.staa.gatekeeper.repository.client.bureau.*;
+import com.alrosa.staa.gatekeeper.repository.client.computer.Computer;
+import com.alrosa.staa.gatekeeper.repository.client.computer.Console;
+import com.alrosa.staa.gatekeeper.repository.client.server.*;
 import javafx.scene.control.TreeItem;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 public class Variables {
     /** Переменные объекты **/
-    /*
+    /**
     Добавляем статический объект дерева - переменная,
     в которой будет размещаться
     выбранный объект в дереве
